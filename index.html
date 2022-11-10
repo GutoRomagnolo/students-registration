@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>Programação para a Web</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+  </head>
+
+  <body>
+    <div class="main-container">
+      <header>Universidade Guarani</header>
+      <form method="post" action="register-student.php" id="register-form" class="register-form">
+        <h3>Registro de estudantes</h3>
+        <div class="name-sex-container">
+          <input
+            name="student-name" 
+            placeholder="Digite o nome" 
+            class="standard-input student-name" 
+            required
+          >
+          <select 
+            name="student-sex" 
+            placeholder="Sexo" 
+            class="standard-input student-sex" 
+            required
+          >
+            <option value="" selected hidden>Sexo</option>
+            <option value="female">Feminino</option>
+            <option value="female">Masculino</option>
+          </select>
+        </div>
+        <div class="identifier-birthday-container">
+          <input 
+            name="student-identifier" 
+            placeholder="Digite o RA" 
+            class="standard-input student-identifier" 
+            required
+          >
+          <input 
+            type="number" 
+            placeholder="Idade"
+            name="quantity"
+            class="standard-input"
+          >
+        </div>
+        <div class="email-address-container">
+          <input 
+            name="student-email" 
+            placeholder="Digite o e-mail" 
+            class="standard-input" 
+            required
+          >
+  
+          <input 
+            name="student-address" 
+            placeholder="Digite o endereço" 
+            class="standard-input" 
+            required
+          >
+        </div>
+        <button 
+          id="submit-button" 
+          class="submit-button"
+          onclick="submitForm()"
+          disabled
+        >
+          Cadastrar
+          <!-- <img id="icon-forward" src="./../assets/icon-forward.svg" alt="Icon forward" class="icon-disabled"> -->
+        </button>
+      </form>
+      <!-- <footer class="footer-container">
+        <div class="footer-text">
+          <h3>Gustavo Ramos Romagnolo</h3>
+          <h4>@GutoRomagnolo</h4>
+        </div>
+        <a href="https://github.com/GutoRomagnolo" target="_blank">
+          <img class="icon-git" alt="Github" src="./assets/icon-git.png" />
+        </a>
+      </footer> -->
+    </div>
+  </body>
+</html>
