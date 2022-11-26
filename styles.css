@@ -4,10 +4,20 @@ body {
   margin: 0;
   align-items: center;
   font-family: 'Roboto', 'sans-serif';
-  background: #313638;
+  background: #242423;
   background-repeat: no-repeat;
   min-height: 100vh;
-  justify-content: center;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  background-color: #111;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 h1 {
@@ -25,7 +35,9 @@ h1 {
 
 h3 {
   font-size: 2rem;
-  padding-bottom: 2rem;
+  margin: 0;
+  padding: 1rem;
+  color: #ffff;
 }
 
 h4 {
@@ -35,47 +47,92 @@ h4 {
 .register-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem;
-  border-radius: 2%;
-  border: solid #000;
-  background: #E8E9EB;
+  align-items: flex-end;
+  margin-top: 10rem;
+  background: #f9f9f9;
+  border-radius: 0.5rem;
   color: #313638;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0.188 0.5rem;
 }
 
-.name-sex-container, .identifier-birthday-container {
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: rgb(214,82,5);
+  background: linear-gradient(185deg, rgba(214,82,5,1) 0%, rgba(251,97,7,1) 100%);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.form-header-background {
+  height: 6rem;
+}
+
+.form-content {
+  padding: 2rem;
+}
+
+.name-container, 
+.identifier-gender-birthday-container, 
+.address-container,
+.email-container,
+.address-container {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  padding-bottom: 1rem;
 }
 
-.email-address-container {
+.input-icon-container {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
-.student-name, .student-identifier {
-  width: 70%;
+.standard-input-icon {
+  position: absolute;
+  padding-left: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-.student-sex:invalid {
+.student-gender {
+  background-image:
+  linear-gradient(45deg, transparent 50%, #000 50%),
+  linear-gradient(135deg, #000 50%, transparent 50%),
+  linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 1.25rem) calc(1rem + 0.125rem),
+    calc(100% - 0.938rem) calc(1rem + 0.125rem),
+    calc(100% - 2.5rem) 0.5em;
+  background-size:
+    0.313rem 0.313rem,
+    0.313rem 0.313rem,
+    0.063rem 1.5rem;
+  background-repeat: no-repeat;
+}
+
+.student-gender:invalid {
   color: rgba(0, 0, 0, 0.5);
 }
 
 .standard-input {
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 3rem;
   color: #000;
   background-color: #7e7e7e1a;
   font-size: 1.2rem;
   font-family: 'Roboto';
   border: none;
+  width: 100%;
 }
 
 .standard-input:hover {
   background-color: #c2c2c21a;
+}
+
+.tree-row-input {
+  width: 30%;
 }
 
 .form-step {
@@ -93,18 +150,22 @@ h4 {
 .submit-button {
   display: flex;
   align-items: center;
-  font-size: 2rem;
-  color: #000;
-  padding: 0.5rem;
-  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.52rem;
+  margin: 0 1.9rem 2rem 0;
   cursor: pointer;
   font-family: 'Roboto';
-  transition: all 0.1s ease-in-out;
+  border-radius: 0.3rem;
   border: 0;
+  background: rgb(214,82,5);
+  background: linear-gradient(185deg, rgba(214,82,5,1) 0%, rgba(251,97,7,1) 100%);
+  color: #fff;
+  right: 0;
 }
 
 .submit-button:hover {
-  transform: scale(1.05);
+  background: rgb(195, 75, 6);
 }
 
 .footer-container {

@@ -9,66 +9,89 @@
   </head>
 
   <body>
+    <header>Universidade Guarani</header>
     <div class="main-container">
-      <header>Universidade Guarani</header>
       <form method="post" action="register-student.php" id="register-form" class="register-form">
-        <h3>Registro de estudantes</h3>
-        <div class="name-sex-container">
-          <input
-            name="student-name" 
-            placeholder="Digite o nome" 
-            class="standard-input student-name" 
-            required
-          >
-          <select 
-            name="student-sex" 
-            placeholder="Sexo" 
-            class="standard-input student-sex" 
-            required
-          >
-            <option value="" selected hidden>Sexo</option>
-            <option value="female">Feminino</option>
-            <option value="female">Masculino</option>
-          </select>
+        <div class="form-header">
+          <h3>CADASTRO DE ESTUDANTES</h3>
         </div>
-        <div class="identifier-birthday-container">
-          <input 
-            name="student-identifier" 
-            placeholder="Digite o RA" 
-            class="standard-input student-identifier" 
-            required
-          >
-          <input 
-            type="number" 
-            placeholder="Idade"
-            name="quantity"
-            class="standard-input"
-          >
+        <div class="form-content">
+          <div class="name-container">
+            <div class="input-icon-container">
+              <img class="standard-input-icon" src="./assets/profile-icon.svg">
+              <input
+                name="name" 
+                type="text"
+                placeholder="Digite o nome" 
+                class="standard-input student-name" 
+                required
+              >
+            </div>
+          </div>
+          <div class="identifier-gender-birthday-container">
+            <div class="input-icon-container tree-row-input">
+              <img class="standard-input-icon" src="./assets/document-icon.svg">
+              <input 
+              name="identifier" 
+              placeholder="Digite o RA" 
+              class="standard-input student-identifier" 
+              required>
+            </div>
+            <div class="input-icon-container tree-row-input">
+              <img class="standard-input-icon" src="./assets/gender-icon.svg">
+              <select 
+                name="gender" 
+                placeholder="Sexo" 
+                class="standard-input student-gender" 
+                required>
+                <option value="" selected hidden>Sexo</option>
+                <option value="female">Feminino</option>
+                <option value="female">Masculino</option>
+              </select>
+            </div>
+            <div class="input-icon-container tree-row-input">
+              <img class="standard-input-icon" src="./assets/year-icon.svg">
+              <input 
+                type="number" 
+                placeholder="Idade"
+                name="age"
+                class="standard-input student-birthday"
+              >
+            </div>
+          </div>
+          <div class="email-container">
+            <div class="input-icon-container">
+              <img class="standard-input-icon" src="./assets/mail-icon.svg">
+              <input 
+                name="email" 
+                type="text"
+                placeholder="Digite o e-mail" 
+                class="standard-input"
+                required
+              >
+            </div>
+          </div>
+          <div class="address-container">
+            <div class="input-icon-container">
+              <img class="standard-input-icon" src="./assets/address-icon.svg">
+              <input 
+                name="address" 
+                placeholder="Digite o endereço" 
+                class="standard-input" 
+                required
+              >
+            </div>
+          </div>
         </div>
-        <div class="email-address-container">
-          <input 
-            name="student-email" 
-            placeholder="Digite o e-mail" 
-            class="standard-input" 
-            required
-          >
-  
-          <input 
-            name="student-address" 
-            placeholder="Digite o endereço" 
-            class="standard-input" 
-            required
-          >
-        </div>
-        <button 
+        <input 
           id="submit-button" 
           class="submit-button"
-          onclick="submitForm()"
-          disabled
+          type="submit"
+          name="submit-button"
+          value="CADASTRAR"
         >
-          Cadastrar
           <!-- <img id="icon-forward" src="./../assets/icon-forward.svg" alt="Icon forward" class="icon-disabled"> -->
-        </button>
+        </input>
       </form>
       <!-- <footer class="footer-container">
         <div class="footer-text">
