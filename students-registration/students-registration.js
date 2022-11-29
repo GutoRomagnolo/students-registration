@@ -6,8 +6,6 @@ const mainContainer = document.getElementById('main-container');
 
 const submitRegisterForm = async (event) => {
   event.preventDefault();
-  registerForm.reset();
-
   try {
     await fetch('students-registration.php', {
       method: 'POST',
@@ -16,6 +14,8 @@ const submitRegisterForm = async (event) => {
 
     const successMessage = 'Estudante registrado com sucesso!';
     invokeRegisterResultMessage('success', successMessage);
+    registerForm.reset();
+    startElementsListeners();
   } catch (error) {
     const errorMessage = 'Não foi possível cadastrar o estudante!';
     invokeRegisterResultMessage('fail', errorMessage);
@@ -44,8 +44,12 @@ const invokeRegisterResultMessage = (result, resultMessage) => {
   }, 2200)
 }
 
-formInputs.forEach(input => {
-  input.addEventListener('input', event => validateFormInputs());
-})
+const startElementsListeners = () => {
+  formInputs.forEach(input => {
+    input.addEventListener('input', event => validateFormInputs());
+  })
+  
+  genderSelector.addEventListener('input', event => validateFormInputs());
+}
 
-genderSelector.addEventListener('input', event => validateFormInputs());
+startElementsListeners();

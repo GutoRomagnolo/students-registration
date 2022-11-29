@@ -2,12 +2,18 @@ const studentListContainer = document.getElementById("students-list");
 let studentsRegister = [];
 
 const getStudentsRegister = async () => {
-  const response = await fetch("./students-register.json");
-  const disorderlyStudentsRegister = await response.json();
-
-  studentsRegister = sortStudentsRegisterByIdentifer(disorderlyStudentsRegister);
-  console.log('studentsRegister', studentsRegister)
-  generateRegisterList();
+  try {
+    const response = await fetch("./students-register.json");
+    const disorderlyStudentsRegister = await response.json();
+    disorderlyStudentsRegister.forEach(student => student.identifier = Number(student.identifier))
+  
+    studentsRegister = sortStudentsRegisterByIdentifer(disorderlyStudentsRegister);
+    generateRegisterList();
+  } catch (error) {
+    studentListContainer.innerHTML += `
+      <p class="registers-not-found">Nenhum registro encontrado :(</p>
+    `
+  }
 };
 
 const generateRegisterList = () => {
