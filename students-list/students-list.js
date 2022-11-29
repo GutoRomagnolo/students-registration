@@ -14,32 +14,40 @@ const generateRegisterList = () => {
   studentsRegister.forEach((student) => {
     studentListContainer.innerHTML += 
       `<div class="register-container">
-        <div class="name-container">
-          <h3>Nome</h3>
+        <div class="standard-container">
+          <h3>NOME</h3>
           <h4>${student.name}</h4>
+          <hr class="horizontal-line">
         </div>
-        <div class="about-container"
-          <div class="identifier-container"
+        <div class="standard-container about-container">
+          <div class="three-row">
             <h3>RA</h3>
             <h4>${student.identifier}</h4>
+            <hr class="horizontal-line">
           </div>
-          <div class="gender-container"
-            <h3>Gênero</h3>
+          <div class="three-row">
+            <h3>GÊNERO</h3>
             <h4>${student.gender}</h4>
+            <hr class="horizontal-line">
           </div>
-          <div class="age-container"
-            <h3>Idade</h3>
+          <div class="three-row">
+            <h3>IDADE</h3>
             <h4>${student.age}</h4>
+            <hr class="horizontal-line">
           </div>
         </div>
-        <div class="email-address-container"
-          <div class="email-container"
-            <h3>Email</h3>
+        <div class="standard-container">
+          <div>
+            <h3>E-MAIL</h3>
             <h4>${student.email}</h4>
+            <hr class="horizontal-line">
           </div>
-          <div class="address-container"
-            <h3>Endereço</h3>
+        </div>
+        <div>
+          <div>
+            <h3>ENDEREÇO</h3>
             <h4>${student.address}</h4>
+            <hr class="horizontal-line">
           </div>
         </div>
       </div>`;

@@ -2,13 +2,14 @@
 <html lang="pt">
   <head>
     <title>Programação para a Web</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="students-registration.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="students-registration.css" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
-    />
+    >
+    <link rel="icon" type="image/x-icon" href="./../assets/document-icon.svg">
   </head>
 
   <body>
@@ -22,7 +23,7 @@
         </a>
       </nav>
     </header>
-    <div class="main-container">
+    <div class="main-container" id="main-container">
       <form
         id="register-form"
         class="register-form"
@@ -32,83 +33,128 @@
           <h3>CADASTRO DE ESTUDANTES</h3>
         </div>
         <div class="form-content">
-          <div class="name-container">
+          <div class="standard-input-container">
+            <label for="student-name-input">
+              <span>NOME</span>
+            </label>
             <div class="input-icon-container">
               <img
                 class="standard-input-icon"
-                src="./../assets/profile-icon.svg"
-              />
+                src="./../assets/document-icon.svg"
+                alt="Nome do estudante"
+              >
               <input
+                id="student-name-input"
                 name="student-name"
                 type="text"
                 placeholder="Digite o nome"
                 class="standard-input student-name"
                 required
-              />
+              >  
             </div>
           </div>
-          <div class="identifier-gender-birthday-container">
-            <div class="input-icon-container tree-row-input">
-              <img
-                class="standard-input-icon"
-                src="./../assets/document-icon.svg"
-              />
-              <input
-                name="student-identifier"
-                placeholder="Digite o RA"
-                class="standard-input student-identifier"
-                required
-              />
+          <div class="standard-input-container three-row-container">
+            <div class="three-row-input">
+              <label for="student-identifier-input">
+                <span>RA</span>
+              </label>
+              <div class="input-icon-container">
+                <img
+                  class="standard-input-icon"
+                  src="./../assets/document-icon.svg"
+                  alt="RA do estudante"
+                >
+                <input
+                  id="student-identifier-input"
+                  type="number"
+                  name="student-identifier"
+                  placeholder="Digite o RA"
+                  class="standard-input student-identifier"
+                  required
+                >
+              </div>
             </div>
-            <div class="input-icon-container tree-row-input">
-              <img class="standard-input-icon" src="./../assets/gender-icon.svg" />
-              <select
-                name="student-gender"
-                placeholder="Gênero"
-                class="standard-input student-gender"
-                required
-              >
-                <option value="" selected hidden>Gênero</option>
-                <option value="female">Feminino</option>
-                <option value="male">Masculino</option>
-                <option value="others">Outros</option>
-                <option value="not-reported">Prefiro não informar</option>
-              </select>
+            <div class="three-row-input">
+              <label for="select-gender">
+                <span>GÊNERO</span>
+              </label>
+              <div class="input-icon-container">
+                <img 
+                  class="standard-input-icon" 
+                  src="./../assets/gender-icon.svg"
+                  alt="Gênero do estudante"
+                >
+                <select
+                  id="select-gender"
+                  name="student-gender"
+                  class="standard-input student-gender"
+                  required
+                >
+                  <option value="" selected hidden>Gênero</option>
+                  <option value="Feminino">Feminino</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Outros">Outros</option>
+                  <option value="Não informado">Prefiro não informar</option>
+                </select>
+              </div>
             </div>
-            <div class="input-icon-container tree-row-input">
-              <img class="standard-input-icon" src="./../assets/year-icon.svg" />
-              <input
-                type="number"
-                placeholder="Idade"
-                name="student-age"
-                class="standard-input student-birthday"
-              />
+            <div class="three-row-input">
+              <label for="student-age-input">
+                <span>IDADE</span>
+              </label>
+              <div class="input-icon-container">
+                <img 
+                  class="standard-input-icon" 
+                  src="./../assets/year-icon.svg"
+                  alt="Idade do estudante"
+                >
+                <input
+                  id="student-age-input"
+                  type="number"
+                  placeholder="Idade"
+                  name="student-age"
+                  class="standard-input student-birthday"
+                >
+              </div>
             </div>
           </div>
-          <div class="email-container">
+          <div class="standard-input-container">
+            <label for="student-email-input">
+              <span>E-MAIL</span>
+            </label>
             <div class="input-icon-container">
-              <img class="standard-input-icon" src="./../assets/mail-icon.svg" />
+              <img 
+                class="standard-input-icon" 
+                src="./../assets/mail-icon.svg"
+                alt="Email do estudante"
+              >
               <input
+                id="student-email-input"
                 name="student-email"
-                type="text"
+                type="email"
                 placeholder="Digite o e-mail"
                 class="standard-input"
                 required
-              />
+              >
             </div>
           </div>
-          <div class="address-container">
+          <div class="standard-input-container">
+            <label for="student-address-input">
+              <span>ENDEREÇO</span>
+            </label>
             <div class="input-icon-container">
               <img
                 class="standard-input-icon"
                 src="./../assets/address-icon.svg"
-              />
+                alt="Endereço do estudante"
+              >
               <input
+                id="student-address-input"
                 name="student-address"
                 placeholder="Digite o endereço"
                 class="standard-input"
                 required
-              />
+              >
             </div>
           </div>
         </div>
@@ -117,6 +163,7 @@
           class="submit-button"
           type="submit"
           name="submit-button"
+          disabled
         >
           CADASTRAR
         </button>
@@ -127,7 +174,7 @@
           <h4>@GutoRomagnolo</h4>
         </div>
         <a href="https://github.com/GutoRomagnolo" target="_blank">
-          <img class="icon-git" alt="Github" src="./../assets/icon-git.png" />
+          <img class="icon-git" alt="Github" src="./../assets/icon-git.png">
         </a>
       </footer>
     </div>

@@ -19,20 +19,23 @@ header {
   background-color: #111;
 }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  padding-top: 2rem;
+  margin: 0;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1rem;
+  padding: 0.5rem 0 0.5rem 0;
   margin: 0;
-  padding: 1rem;
-  color: #ffff;
+  font-weight: bold;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -43,6 +46,14 @@ h4 {
   font-size: 1rem;
   text-align: center;
   font-family: 'Roboto';
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
 }
 
 .students-nav {
@@ -61,7 +72,50 @@ h4 {
 
 .students-list-container {
   display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.register-container {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
   flex-direction: column;
+  width: 30%;
+  background: #f9f9f9;
+  border: 0.3rem solid transparent;
+  border-radius: 0.5rem;
+  color: #313638;
+  border-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%) 1; 
+}
+
+.three-row {
+  width: 30%;
+}
+
+.standard-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.about-sub-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontal-line {
+  background-color: #000;
+  margin: 0;
 }
 
 .footer-container {
@@ -69,7 +123,7 @@ h4 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 12rem;
+  padding-bottom: 2rem;
   color: #fff;
 }
 
